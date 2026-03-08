@@ -4,4 +4,13 @@ def show_messages():
     for message in messages:
         print(message)
 
-show_messages()
+sent_messages = []
+
+def send_messages():
+    for text in messages:
+        print(text)
+        sent_messages.append(text)
+        messages.remove(text)
+
+
+send_messages()
