@@ -6,19 +6,13 @@ def show_messages():
 
 sent_messages = []
 
-def my_end_messages():
-    while messages:
-        to_send = messages.pop()
-
-def send_messages():
+def send_messages(messages, sent_messages):
     for text in messages:
         print(text)
         sent_messages.append(text)
-    #my_end_messages()
     del messages[:]
 
-    print()
-    print(messages)
-    print(sent_messages)
-
-send_messages()
+send_messages(messages[:], sent_messages)
+print()
+print(messages)
+print(sent_messages)
